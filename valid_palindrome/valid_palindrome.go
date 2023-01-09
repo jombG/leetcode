@@ -3,6 +3,10 @@ package valid_palindrome
 import "strings"
 
 func isPalindrome(s string) bool {
+	ignore := func(b byte) bool {
+		return (b >= 'A' && b <= 'Z') || (b >= 'a' && b <= 'z') || (b >= '0' && b <= '9')
+	}
+
 	str := strings.ToLower(strings.ReplaceAll(s, " ", ""))
 	length := len(str)
 	left, right := 0, length-1
@@ -25,8 +29,4 @@ func isPalindrome(s string) bool {
 	}
 
 	return true
-}
-
-func ignore(b byte) bool {
-	return (b >= 'A' && b <= 'Z') || (b >= 'a' && b <= 'z') || (b >= '0' && b <= '9')
 }
