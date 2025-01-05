@@ -1,4 +1,4 @@
-package merge_k__sorted_lists
+package merge_k_sorted_lists
 
 type ListNode struct {
 	Val  int

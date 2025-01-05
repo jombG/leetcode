@@ -7,3 +7,7 @@ func main() {
 		fmt.Println(ch - 'a')
 	}
 }
+
+func lastStoneWeight(stones []int) int {
+	return 0
+}
